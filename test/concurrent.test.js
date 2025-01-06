@@ -6,6 +6,7 @@
 // NOTE:
 // test.concurrent doesn't count assertions within Test Context when using expect.assertions
 // https://github.com/vitest-dev/vitest/issues/1412
+// https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-expect-assertions.md
 //
 /* eslint-disable @vitest/prefer-expect-assertions */
 
