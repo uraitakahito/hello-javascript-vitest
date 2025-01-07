@@ -1,6 +1,6 @@
-/* eslint-disable @vitest/prefer-expect-assertions */
 /* eslint-disable max-len */
 
+// Reference:
 // https://qiita.com/mori_goq/items/5b01666cff5134f821bd
 
 // Asynchronous function that resolves successfully
