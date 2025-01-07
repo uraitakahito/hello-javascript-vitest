@@ -24,28 +24,28 @@ const sleep = (t) => new Promise((resolve) => setTimeout(resolve, t));
 
 describe('concurrent and sequential tests', () => {
   beforeAll(async () => {
-    await sleep(100);
+    await sleep(10);
     console.log('beforeAll() complete.');
   });
 
   beforeEach(async () => {
-    await sleep(100);
+    await sleep(10);
     console.log('beforeEach() complete.');
   });
 
   afterEach(async () => {
-    await sleep(100);
+    await sleep(10);
     console.log('afterEach() complete.');
   });
 
   afterAll(async () => {
-    await sleep(100);
+    await sleep(10);
     console.log('afterAll() complete.');
   });
 
   describe('concurrent suite', () => {
     it.concurrent('a', async () => {
-      await sleep(100);
+      await sleep(10);
 
       expect(1).toBe(1);
 
@@ -53,7 +53,7 @@ describe('concurrent and sequential tests', () => {
     });
 
     it.concurrent('b', async () => {
-      await sleep(100);
+      await sleep(10);
 
       expect(2).toBe(2);
 
@@ -61,7 +61,7 @@ describe('concurrent and sequential tests', () => {
     });
 
     it.concurrent('c', async () => {
-      await sleep(100);
+      await sleep(10);
 
       expect(3).toBe(3);
 
@@ -73,7 +73,7 @@ describe('concurrent and sequential tests', () => {
     it.sequential('a', async () => {
       expect.assertions(1);
 
-      await sleep(100);
+      await sleep(10);
 
       expect(1).toBe(1);
 
@@ -83,7 +83,7 @@ describe('concurrent and sequential tests', () => {
     it.sequential('b', async () => {
       expect.assertions(1);
 
-      await sleep(100);
+      await sleep(10);
 
       expect(2).toBe(2);
 
@@ -93,7 +93,7 @@ describe('concurrent and sequential tests', () => {
     it.sequential('c', async () => {
       expect.assertions(1);
 
-      await sleep(100);
+      await sleep(10);
 
       expect(3).toBe(3);
 
