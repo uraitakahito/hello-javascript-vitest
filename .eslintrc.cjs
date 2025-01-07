@@ -60,6 +60,13 @@ module.exports = {
       plugins: ['@vitest'],
       rules: {
         //
+        // It is better to avoid using hooks as much as possible
+        // https://zenn.dev/bun913/articles/0aeef3e7347793
+        // https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/no-hooks.md
+        //
+        '@vitest/no-hooks': 'warn',
+
+        //
         // NOTE:
         // test.concurrent doesn't count assertions within Test Context when using expect.assertions
         // https://github.com/vitest-dev/vitest/issues/1412
